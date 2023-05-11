@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,25 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  name:any = undefined;
+  Sex:any = undefined;
+  Age:any = undefined;
+  color:any = undefined;
+  food:any = undefined;
+  isCheck: boolean = false;
+  constructor(private router:Router) {}
+  
 
+  clickfuntion() {
+    console.log(this.name);
+    console.log(this.Sex);
+    console.log(this.Age);
+    console.log(this.color);
+    console.log(this.food);
+    console.log(this.isCheck);
+  }
+
+  navigetePage1(){
+    this.router.navigate(['/page1']);
+  }
 }
